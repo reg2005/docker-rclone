@@ -3,7 +3,7 @@
 (
   flock -n 200 || exit 1
   
-  sync_command="rclone sync /data $SYNC_DESTINATION:$SYNC_DESTINATION_SUBPATH"
+  sync_command="rclone copy /data $SYNC_DESTINATION:$SYNC_DESTINATION_SUBPATH"
   
   if [ "$SYNC_COMMAND" ]; then
   sync_command="$SYNC_COMMAND"
